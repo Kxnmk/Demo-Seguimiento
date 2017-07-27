@@ -6,7 +6,7 @@ import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
 import { NavbarComponent } from './navbar/navbar.component';
 
-import { RouterModule, Routes} from '@angular/router';
+import { APP_ROUTING } from './app.routes';
 
 @NgModule({
   declarations: [
@@ -16,7 +16,8 @@ import { RouterModule, Routes} from '@angular/router';
     NavbarComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    APP_ROUTING
   ],
   providers: [],
   bootstrap: [AppComponent]
