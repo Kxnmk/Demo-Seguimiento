@@ -9,6 +9,10 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { APP_ROUTING } from './app.routes';
 import { CalendarComponent } from './calendar/calendar.component';
 
+//calendar
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { CalendarModule } from 'angular-calendar';
+
 
 @NgModule({
   declarations: [
@@ -20,7 +24,9 @@ import { CalendarComponent } from './calendar/calendar.component';
   ],
   imports: [
     BrowserModule,
-    APP_ROUTING
+    APP_ROUTING,
+    BrowserAnimationsModule,
+    CalendarModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
