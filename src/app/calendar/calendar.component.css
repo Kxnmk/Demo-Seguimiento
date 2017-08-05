@@ -5,3 +5,11 @@
 .row{
   padding-top: 1em;
 }
+
+.scrollable{
+  overflow-y: scroll;
+}
+
+container{
+  overflow: hidden;
+}
