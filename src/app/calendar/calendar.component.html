@@ -1,4 +1,54 @@
-<mwl-calendar-month-view
-  [viewDate]="viewDate"
-  [events]="events">
-</mwl-calendar-month-view>
+<div class="container">
+  <div class="row">
+    <div class="col col-lg-3">
+      <p *ngIf="clickedDate">{{ clickedDate | calendarDate:'dayViewTitle':'es' }}</p>
+    </div>
+    <div class="col">
+      <!--<mwl-calendar-month-view-->
+        <!--[viewDate]="viewDate"-->
+        <!--[events]="events">-->
+      <!--</mwl-calendar-month-view>-->
+
+      <div class="row">
+        <div class="col-md-6">
+          <div class="btn-group">
+            <div
+              class="btn btn-primary"
+              mwlCalendarPreviousView
+              view="month"
+              [(viewDate)]="viewDate">
+              Anterior
+            </div>
+            <div
+              class="btn btn-secondary"
+              mwlCalendarToday
+              [(viewDate)]="viewDate">
+              Hoy
+            </div>
+            <div
+              class="btn btn-primary"
+              mwlCalendarNextView
+              view="month"
+              [(viewDate)]="viewDate">
+              Siguiente
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 text-right">
+          <h3>{{ viewDate | calendarDate:'monthViewTitle':'es' }}</h3>
+        </div>
+      </div>
+      <br>
+
+      <mwl-calendar-month-view
+        [viewDate]="viewDate"
+        [events]="events"
+        [locale]="locale"
+        (beforeViewRender)="beforeMonthViewRender($event)"
+        (dayClicked)="dayClicked($event.day)">
+      </mwl-calendar-month-view>
+
+    </div>
+  </div>
+</div>
+

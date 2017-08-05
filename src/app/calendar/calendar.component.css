@@ -1,0 +1,7 @@
+.cal-day-selected,
+.cal-day-selected:hover {
+  background-color: red !important;
+}
+.row{
+  padding-top: 1em;
+}
