@@ -1,21 +1,20 @@
 <div class="container">
   <div class="row">
     <div class="col col-lg-4">
-      <div class="card card-inverse card-primary mb-1 text-center">
-        <div class="card-block">
-          <blockquote class="card-blockquote">
-            <p *ngIf="clickedDate">{{ clickedDate | calendarDate:'dayViewTitle':'es' }}</p>
-          </blockquote>
+
+      <div class="card" >
+        <div class="card-header card-inverse card-primary" >
+          <p *ngIf="clickedDate">{{ clickedDate | calendarDate:'dayViewTitle':'es' }}</p>
         </div>
-      </div>
-      <div class="scrollable">
-        <mwl-calendar-day-view
-          [viewDate]="clickedDate"
-          [events]="events"
-          [hourSegments]="1"
-          [dayStartHour]="6"
-          [dayEndHour]="20">
-        </mwl-calendar-day-view>
+        <div class="card-block">
+          <mwl-calendar-day-view
+            [viewDate]="clickedDate"
+            [events]="events"
+            [hourSegments]="1"
+            [dayStartHour]="6"
+            [dayEndHour]="20">
+          </mwl-calendar-day-view>
+        </div>
       </div>
     </div>
 
